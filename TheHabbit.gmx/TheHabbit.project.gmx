@@ -8,13 +8,17 @@
   <sprites name="sprites">
     <sprites name="Sandwich Game">
       <sprite>sprites\Bilbo</sprite>
+      <sprites name="background">
+        <sprite>sprites\Dwarfs</sprite>
+        <sprite>sprites\Table</sprite>
+      </sprites>
       <sprites name="plates">
         <sprite>sprites\plate1a</sprite>
         <sprite>sprites\plate1b</sprite>
       </sprites>
-      <sprites name="background">
-        <sprite>sprites\Dwarfs</sprite>
-        <sprite>sprites\Table</sprite>
+      <sprites name="garbage">
+        <sprite>sprites\garbage1a</sprite>
+        <sprite>sprites\garbage1b</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -25,7 +29,12 @@
   <objects name="objects">
     <object>objects\obj_Bilbo</object>
     <objects name="plates">
-      <object>objects\obj_plate1</object>
+      <object>objects\obj_plate1a</object>
+      <object>objects\obj_plate1b</object>
+    </objects>
+    <objects name="garbage">
+      <object>objects\obj_garbage1a</object>
+      <object>objects\obj_garbage1b</object>
     </objects>
   </objects>
   <rooms name="rooms">
