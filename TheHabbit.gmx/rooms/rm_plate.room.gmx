@@ -3,8 +3,8 @@
   <caption></caption>
   <width>256</width>
   <height>144</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -12,8 +12,7 @@
   <showcolour>0</showcolour>
   <code>//creates player
 script_execute(scr_initialize_plate)
-instance_create(128,100,obj_Bilbo)
-instance_create(0,0,obj_spawner)</code>
+instance_create(128,100,obj_Bilbo)</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

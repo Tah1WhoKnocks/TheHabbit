@@ -35,7 +35,8 @@
     <objects name="Sandwich Game">
       <objects name="plates">
         <object>objects\obj_plate1a</object>
-        <object>objects\obj_plate1b</object>
+        <object>objects\obj_plate1L</object>
+        <object>objects\obj_plate1R</object>
       </objects>
       <objects name="garbage">
         <object>objects\obj_garbage1a</object>
@@ -44,10 +45,8 @@
       <object>objects\obj_Bilbo</object>
       <object>objects\obj_table</object>
       <object>objects\obj_dwarves</object>
-      <object>objects\obj_spawner</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_plate</room>
   </rooms>

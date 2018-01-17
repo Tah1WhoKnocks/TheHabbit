@@ -29,7 +29,53 @@
 leftPos=10
 //determines where to stack garbage and where to put new hitbox
 rightPos=10
+//speed for alarm
+alarm_speed=room_speed*2
+//sets alarm for spawning stuff
+alarm[0]=alarm_speed
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//decides what kind of object to spawn
+randal=irandom(2)
+if(randal==0){rand=obj_garbage1a}
+else{rand=obj_plate1a}
+
+//decides where to spawn and spawns
+location=irandom(4)
+if(location==0)
+    instance_create(88,-4,rand)
+else if(location==1)
+    instance_create(108,-4,rand)
+else if(location==2)
+    instance_create(128,-4,rand)
+else if(location==3)
+    instance_create(148,-4,rand)
+else if(location==4)
+    instance_create(168,-4,rand)
+    
+//resets alarm
+alarm[0]=alarm_speed
 </string>
           </argument>
         </arguments>
@@ -62,20 +108,38 @@ if(keyboard_check(vk_left) &amp;&amp; x&gt;30+global.bilbospeed){
     x-=global.bilbospeed
     sprite_index=BilboLeft
 }
-//collision for left hand
+
+//fixes positions if less than 10
+if(leftPos&lt;10)leftPos=10
+if(rightPos&lt;10)rightPos=10
+
+//plate collision for left hand
 leftHand = collision_rectangle(x-16, y-leftPos+3, x-10, y-leftPos, obj_plate1a, false,false)
 if(leftHand!=noone){
     with(leftHand)instance_destroy()
-    instance_create(x-13,y-leftPos,obj_plate1b)
+    instance_create(x-13,y-leftPos,obj_plate1L)
     leftPos+=2
 }
-//selfexplanatory
-rightHand = collision_rectangle(x+16, y-rightPos+3, x+10, y-rightPos, obj_garbage1a, false,false)
+//garbage collision for left hand
+leftHand = collision_rectangle(x-16, y-leftPos+3, x-10, y-leftPos, obj_garbage1a, false,false)
+if(leftHand!=noone){
+    with(leftHand)instance_destroy()
+    leftPos-=(2*5)
+}
+//plate right
+rightHand = collision_rectangle(x+10, y-rightPos+3, x+16, y-rightPos, obj_plate1a, false,false)
 if(rightHand!=noone){
     with(rightHand)instance_destroy()
-    instance_create(x+13,y-rightPos,obj_garbage1b)
+    instance_create(x+13,y-rightPos,obj_plate1R)
     rightPos+=2
 }
+//garbage right
+rightHand = collision_rectangle(x+10, y-rightPos+3, x+16, y-rightPos, obj_garbage1a, false,false)
+if(rightHand!=noone){
+    with(rightHand)instance_destroy()
+    rightPos-=(2*5)
+}
+
 
 </string>
           </argument>

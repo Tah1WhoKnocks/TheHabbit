@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//makes objects "stick together"
+            <string>//destroys in case of garbage
+if(y&lt;obj_Bilbo.y-obj_Bilbo.leftPos+2)
+    instance_destroy(self)
+//makes objects "stick together"
 x = obj_Bilbo.x-13
 </string>
           </argument>
