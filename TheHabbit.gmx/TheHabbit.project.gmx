@@ -22,10 +22,16 @@
         <sprite>sprites\garbage1b</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\nothing</sprite>
+    <sprites name="Title">
+      <sprite>sprites\spr_title_background</sprite>
+      <sprite>sprites\spr_title_dragon</sprite>
+      <sprite>sprites\spr_title_tolkien</sprite>
+      <sprite>sprites\spr_title_buttons</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\BilboHouse</background>
+    <background>background\title</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -46,8 +52,15 @@
       <object>objects\obj_table</object>
       <object>objects\obj_dwarves</object>
     </objects>
+    <objects name="Title">
+      <object>objects\obj_title_background</object>
+      <object>objects\obj_title_dragon</object>
+      <object>objects\obj_title_tolkien</object>
+      <object>objects\obj_title_buttons</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
     <room>rooms\rm_plate</room>
   </rooms>
   <help>
