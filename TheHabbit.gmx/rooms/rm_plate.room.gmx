@@ -55,6 +55,8 @@ instance_create(128,100,obj_Bilbo)</code>
   <instances>
     <instance objName="obj_dwarves" x="128" y="0" name="inst_0FB07772" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_table" x="128" y="0" name="inst_98F71534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bilbo_life_bar" x="0" y="0" name="inst_CF66AEC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bilbo_life_juice" x="0" y="0" name="inst_EE187A4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
