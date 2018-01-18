@@ -18,11 +18,14 @@
       <sprites name="plates">
         <sprite>sprites\plate1a</sprite>
         <sprite>sprites\plate1b</sprite>
+        <sprite>sprites\plateGold</sprite>
       </sprites>
       <sprites name="garbage">
         <sprite>sprites\garbage1a</sprite>
         <sprite>sprites\garbage1b</sprite>
       </sprites>
+      <sprite>sprites\LeftDelivery</sprite>
+      <sprite>sprites\RightDelivery</sprite>
     </sprites>
     <sprites name="Title">
       <sprite>sprites\spr_title_background</sprite>
@@ -45,6 +48,7 @@
         <object>objects\obj_plate1a</object>
         <object>objects\obj_plate1L</object>
         <object>objects\obj_plate1R</object>
+        <object>objects\obj_plate1b</object>
       </objects>
       <objects name="garbage">
         <object>objects\obj_garbage1a</object>
@@ -53,6 +57,8 @@
       <object>objects\obj_Bilbo</object>
       <object>objects\obj_table</object>
       <object>objects\obj_dwarves</object>
+      <object>objects\obj_LeftDelivery</object>
+      <object>objects\obj_RightDelivery</object>
     </objects>
     <objects name="Title">
       <object>objects\obj_title_background</object>
@@ -65,8 +71,8 @@
     <object>objects\obj_cursor</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_title</room>
     <room>rooms\rm_plate</room>
+    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

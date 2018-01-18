@@ -28,6 +28,14 @@
             <string>//destroys in case of garbage
 if(y&lt;obj_Bilbo.y-obj_Bilbo.leftPos+2)
     instance_destroy(self)
+//turns gold
+if((obj_Bilbo.leftPos&gt;30)&amp;&amp;(sprite_index!=plateGold)){
+    sprite_index=plateGold
+    obj_plate1L.image_speed=(4)/room_speed
+}
+if((obj_Bilbo.leftPos&lt;30)&amp;&amp;(sprite_index==plateGold)){
+    sprite_index=plate1b
+}
 //makes objects "stick together"
 x = obj_Bilbo.x-13
 </string>
