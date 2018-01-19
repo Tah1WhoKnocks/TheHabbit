@@ -7,7 +7,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_bilbo_life_bar</sprite>
-    <sprite>sprites\spr_bilbo_life_juice</sprite>
     <sprites name="Sandwich Game">
       <sprite>sprites\BilboLeft</sprite>
       <sprite>sprites\BilboRight</sprite>
@@ -33,6 +32,15 @@
       <sprite>sprites\spr_title_tolkien</sprite>
       <sprite>sprites\spr_title_buttons</sprite>
     </sprites>
+    <sprites name="life_juice">
+      <sprite>sprites\life5</sprite>
+      <sprite>sprites\life4</sprite>
+      <sprite>sprites\life3</sprite>
+      <sprite>sprites\life2</sprite>
+      <sprite>sprites\life1</sprite>
+    </sprites>
+    <sprite>sprites\nothing</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BilboHouse</background>
@@ -43,6 +51,7 @@
     <script>scripts\scr_initialize_plate.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_transition</object>
     <objects name="Sandwich Game">
       <objects name="plates">
         <object>objects\obj_plate1a</object>
@@ -69,6 +78,7 @@
     <object>objects\obj_bilbo_life_bar</object>
     <object>objects\obj_bilbo_life_juice</object>
     <object>objects\obj_cursor</object>
+    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_plate</room>

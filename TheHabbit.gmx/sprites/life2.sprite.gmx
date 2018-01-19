@@ -6,11 +6,11 @@
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>2</bboxmode>
-  <bbox_left>178</bbox_left>
-  <bbox_right>241</bbox_right>
-  <bbox_top>70</bbox_top>
-  <bbox_bottom>80</bbox_bottom>
+  <bboxmode>0</bboxmode>
+  <bbox_left>80</bbox_left>
+  <bbox_right>105</bbox_right>
+  <bbox_top>20</bbox_top>
+  <bbox_bottom>29</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,6 @@
   <width>256</width>
   <height>144</height>
   <frames>
-    <frame index="0">images\spr_title_buttons_0.png</frame>
+    <frame index="0">images\life2_0.png</frame>
   </frames>
 </sprite>

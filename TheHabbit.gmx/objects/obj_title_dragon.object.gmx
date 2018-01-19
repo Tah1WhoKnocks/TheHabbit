@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=8
+            <string>image_speed=12/room_speed
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(x&gt;0)x-=room_speed/60
+            <string>if(x&gt;-200)x-=1.25
 else x=256
 </string>
           </argument>

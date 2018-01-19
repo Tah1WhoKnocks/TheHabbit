@@ -31,6 +31,7 @@ if(y&lt;obj_Bilbo.y-obj_Bilbo.rightPos+2)
 //turns gold
 if((obj_Bilbo.rightPos&gt;30)&amp;&amp;(sprite_index!=plateGold)){
     sprite_index=plateGold
+    image_index=0
     obj_plate1R.image_speed=(4)/room_speed
 }
 if((obj_Bilbo.rightPos&lt;30)&amp;&amp;(sprite_index==plateGold)){

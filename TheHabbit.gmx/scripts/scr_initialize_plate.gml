@@ -5,6 +5,5 @@ global.fallspeed=(1*30)/room_speed
 //score
 global.leftScore=0
 global.rightScore=0
-//win condition
-if(global.leftScore+global.rightScore==5){
-}
+//health
+global.hits=5

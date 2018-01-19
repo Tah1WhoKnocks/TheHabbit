@@ -30,9 +30,9 @@ leftPos=10
 //determines where to stack garbage and where to put new hitbox
 rightPos=10
 //speed for alarm
-alarm_speed=room_speed*2
+global.alarm_speed=room_speed*1.6
 //sets alarm for spawning stuff
-alarm[0]=alarm_speed
+alarm[0]=global.alarm_speed
 
 </string>
           </argument>
@@ -56,7 +56,9 @@ alarm[0]=alarm_speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//decides what kind of object to spawn
+            <string>//win condition
+if(global.leftScore+global.rightScore&lt;7&amp;&amp;global.hits&gt;0){
+//decides what kind of object to spawn
 randal=irandom(2)
 if(randal==0){rand=obj_garbage1a}
 else{rand=obj_plate1a}
@@ -75,7 +77,8 @@ else if(location==4)
     instance_create(168,-4,rand)
     
 //resets alarm
-alarm[0]=room_speed/2
+alarm[0]=global.alarm_speed
+}
 </string>
           </argument>
         </arguments>
@@ -98,7 +101,8 @@ alarm[0]=room_speed/2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//move right
+            <string>if(global.hits&gt;0){
+//move right
 if(keyboard_check(vk_right) &amp;&amp; x&lt;226-global.bilbospeed){
     x+=global.bilbospeed
     sprite_index=BilboRight
@@ -120,6 +124,7 @@ if(leftHand!=noone){
         leftPos+=2
     } else {
         leftPos-=(2*5)
+        global.hits--
     }
 }
 //garbage collision for left hand
@@ -127,6 +132,7 @@ leftHand = collision_rectangle(x-16, y-leftPos+3, x-10, y-leftPos, obj_garbage1a
 if(leftHand!=noone){
     with(leftHand)instance_destroy()
     leftPos-=(2*5)
+    global.hits--
 }
 //plate right
 rightHand = collision_rectangle(x+10, y-rightPos+3, x+16, y-rightPos, obj_plate1a, false,false)
@@ -137,6 +143,7 @@ if(rightHand!=noone){
         rightPos+=2
     } else {
         rightPos-=(2*5)
+        global.hits--
     }
 }
 //garbage right
@@ -144,6 +151,8 @@ rightHand = collision_rectangle(x+10, y-rightPos+3, x+16, y-rightPos, obj_garbag
 if(rightHand!=noone){
     with(rightHand)instance_destroy()
     rightPos-=(2*5)
+    global.hits--
+}
 }
 </string>
           </argument>

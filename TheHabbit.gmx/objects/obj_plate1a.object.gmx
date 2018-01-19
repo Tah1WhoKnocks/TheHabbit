@@ -26,7 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//destroys plate if hits ground
-if(y&gt;144)instance_destroy()
+if(y&gt;144){
+    instance_destroy()
+    global.hits--
+}
 //moves plate down
 y+=global.fallspeed
 </string>
