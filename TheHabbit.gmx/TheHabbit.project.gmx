@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound_misty_mountains</sound>
+    <sound>sound\sound_nimoy</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_bilbo_life_bar</sprite>
     <sprites name="Sandwich Game">
@@ -40,7 +43,9 @@
       <sprite>sprites\life1</sprite>
     </sprites>
     <sprite>sprites\nothing</sprite>
-    <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_game_over</sprite>
+    <sprite>sprites\spr_replay</sprite>
+    <sprite>sprites\spr_title_screen_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BilboHouse</background>
@@ -68,6 +73,11 @@
       <object>objects\obj_dwarves</object>
       <object>objects\obj_LeftDelivery</object>
       <object>objects\obj_RightDelivery</object>
+      <objects name="win/lose">
+        <object>objects\obj_title_screen</object>
+        <object>objects\obj_replay</object>
+        <object>objects\obj_game_over</object>
+      </objects>
     </objects>
     <objects name="Title">
       <object>objects\obj_title_background</object>
@@ -78,11 +88,10 @@
     <object>objects\obj_bilbo_life_bar</object>
     <object>objects\obj_bilbo_life_juice</object>
     <object>objects\obj_cursor</object>
-    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_plate</room>
     <room>rooms\rm_title</room>
+    <room>rooms\rm_plate</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

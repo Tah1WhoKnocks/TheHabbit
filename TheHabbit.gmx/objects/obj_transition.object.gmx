@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-20</depth>
+  <depth>-15</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>a=0
-fade=1
+fade=.5
 </string>
           </argument>
         </arguments>
@@ -49,7 +49,7 @@ fade=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>a = clamp(a + (fade*0.05),0,.5)
+            <string>a = clamp(a + (fade*0.05),0,.75)
 draw_set_color(c_black)
 draw_set_alpha(a)
 draw_rectangle(0,0,256,144,0)
